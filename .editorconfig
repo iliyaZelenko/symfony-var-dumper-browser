@@ -1,0 +1,23 @@
+# editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+# for all files by default this indent
+indent_size = 2
+
+[*.{js,ts,vue}]
+# 2 space indentation
+indent_size = 2
+
+[*.{php,yml}]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
