@@ -78,6 +78,24 @@ this package (CLI process) is watching the file changes (dump.html) which makes 
 When the html file is changed through the symphony (and added new messages to this file),
 a signal is sent to the browser through [sockets](socket.io) and the browser displays these messages on the page.
 
+## Common mistakes
+
+if you have many windows in the browser associated with the server of this package (with 9000 port by default) then some of them may stop receiving content.
+
+**Solution**: Just refresh the desired window from all. Or close unnecessary windows.
+
+---
+
+If you run `php ./bin/console server: dump --format = html> dump.html` (not through `dump-browser --run-dump`), then you may have a problem when closing such a process, it will not complete when closing and will continue to use port 9912. I observed this problem in Windows. 
+
+**Solution**: 
+
+1) Find processes by port: `netstat -ano | findStr "9912"`
+2) Kill process by PID: `Taskkill /F /IM <PID>` (e.g. `Taskkill /F /IM 6736`)
+
+
+php ./bin/console server:dump --format=html > dump.html
+
 ## TODO
 
 - tests
