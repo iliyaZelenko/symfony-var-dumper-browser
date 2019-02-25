@@ -1,10 +1,12 @@
-![](https://i.imgur.com/O5Be0eX.png)
-
+[![](
+https://i.imgur.com/O5Be0eX.png)](https://www.youtube.com/watch?v=OERq-XUUxZQ&feature=youtu.be
+)
 
 This package can be easily used in your Symfony projects.
 
 It allows you to debug through [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`), 
 providing a convenient and beautiful information output in the **browser** and **without reloading** the page.
+[**VIDEO**](https://www.youtube.com/watch?v=OERq-XUUxZQ&feature=youtu.be)
 
 Thus, you use the `dump()` function in your code, anywhere, for example, when do you request to **REST API**, 
 or in the **console command** and all the information will be displayed in your **browser** in **live mode**.
