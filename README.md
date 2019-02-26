@@ -24,6 +24,8 @@ I can add a lot more, write sentences!
 
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iliyaZelenko/symfony-var-dumper-browser.svg)](https://greenkeeper.io/)
+
 <small>It is assumed that in the root of your project there is a file `package.json`.</small>
 
 ```bash
