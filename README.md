@@ -38,9 +38,9 @@ You need to start two servers (`server:dump` and server of this package),
 fortunately this can be done with one command:
 
 ```bash
-npx server:dump-browser --run-dump
+npx dump-browser --run-dump
 # Or if you're using Yarn
-yarn server:dump-browser --run-dump
+yarn dump-browser --run-dump
 ```
 
 There is a second way:
