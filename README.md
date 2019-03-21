@@ -1,10 +1,12 @@
-![](https://i.imgur.com/O5Be0eX.png)
-
+[![](
+https://i.imgur.com/O5Be0eX.png)](https://www.youtube.com/watch?v=OERq-XUUxZQ&feature=youtu.be
+)
 
 This package can be easily used in your Symfony projects.
 
 It allows you to debug through [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`), 
 providing a convenient and beautiful information output in the **browser** and **without reloading** the page.
+[**VIDEO**](https://www.youtube.com/watch?v=OERq-XUUxZQ&feature=youtu.be)
 
 Thus, you use the `dump()` function in your code, anywhere, for example, when do you request to **REST API**, 
 or in the **console command** and all the information will be displayed in your **browser** in **live mode**.
@@ -75,6 +77,24 @@ and another server on the Node.js which you can open in the browser,
 this package (CLI process) is watching the file changes (dump.html) which makes a symphony server.
 When the html file is changed through the symphony (and added new messages to this file),
 a signal is sent to the browser through [sockets](socket.io) and the browser displays these messages on the page.
+
+## Common mistakes
+
+if you have many windows in the browser associated with the server of this package (with 9000 port by default) then some of them may stop receiving content.
+
+**Solution**: Just refresh the desired window from all. Or close unnecessary windows.
+
+---
+
+If you run `php ./bin/console server: dump --format = html> dump.html` (not through `dump-browser --run-dump`), then you may have a problem when closing such a process, it will not complete when closing and will continue to use port 9912. I observed this problem in Windows. 
+
+**Solution**: 
+
+1) Find processes by port: `netstat -ano | findStr "9912"`
+2) Kill process by PID: `Taskkill /F /IM <PID>` (e.g. `Taskkill /F /IM 6736`)
+
+
+php ./bin/console server:dump --format=html > dump.html
 
 ## TODO
 
