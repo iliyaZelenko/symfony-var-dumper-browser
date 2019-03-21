@@ -72,7 +72,7 @@ ml).
 
 ## How it works
 
-Command `server:dump-browser --run-dump` starts the [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`),
+Command `dump-browser --run-dump` starts the [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`),
 and another server on the Node.js which you can open in the browser,
 this package (CLI process) is watching the file changes (dump.html) which makes a symphony server.
 When the html file is changed through the symphony (and added new messages to this file),
