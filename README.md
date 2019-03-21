@@ -36,9 +36,9 @@ You need to start two servers (`server:dump` and server of this package),
 fortunately this can be done with one command:
 
 ```bash
-npx server:dump-browser --run-dump
+npx dump-browser --run-dump
 # Or if you're using Yarn
-yarn server:dump-browser --run-dump
+yarn dump-browser --run-dump
 ```
 
 There is a second way:
@@ -70,7 +70,7 @@ ml).
 
 ## How it works
 
-Command `server:dump-browser --run-dump` starts the [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`),
+Command `dump-browser --run-dump` starts the [Symfony VarDumper server](https://symfony.com/blog/new-in-symfony-4-1-vardumper-server) (`bin/console dump:server`),
 and another server on the Node.js which you can open in the browser,
 this package (CLI process) is watching the file changes (dump.html) which makes a symphony server.
 When the html file is changed through the symphony (and added new messages to this file),
